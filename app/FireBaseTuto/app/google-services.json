@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1043716124981",
+    "firebase_url": "https://fir-proyect-rod.firebaseio.com",
+    "project_id": "fir-proyect-rod",
+    "storage_bucket": "fir-proyect-rod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043716124981:android:5ee48ea22d972f84",
+        "android_client_info": {
+          "package_name": "com.example.rodpro.firebasetuto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043716124981-b1a6fthgrrg9ns2lqaljel50g7j2bmhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rodpro.firebasetuto",
+            "certificate_hash": "9cdbb97101e9d182528b52cdf2326ce5a09f2ac5"
+          }
+        },
+        {
+          "client_id": "1043716124981-r1goiqab7fc93mpq9a0tgj72gbdgsl5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6HTesfsaRr_wDc2-XvU5PIul777YTC7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043716124981-r1goiqab7fc93mpq9a0tgj72gbdgsl5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
