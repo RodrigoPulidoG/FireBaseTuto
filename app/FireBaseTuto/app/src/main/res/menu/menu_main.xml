@@ -12,7 +12,7 @@
         app:showAsAction="always"/>
 
     <item android:id="@+id/icon_delete"
-        android:icon="@drawable/ic_action_name"
+        android:icon="@drawable/ic_stat_ic_notification"
         android:title="Edit Name"
         app:showAsAction="always"/>
 
