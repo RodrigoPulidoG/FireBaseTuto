@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_stat_ic_notification"/>
@@ -22,6 +23,12 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:resource="@string/default_notification_channel_id"/>
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="true" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -31,11 +38,6 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".FirebaseService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
         <service
             android:name=".MyService">
             <intent-filter>
