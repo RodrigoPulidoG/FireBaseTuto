@@ -17,20 +17,20 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.Map;
-
 import static android.graphics.Color.rgb;
 
 public class MyService extends FirebaseMessagingService {
 
-    String TAG = "Mensajes Firebase: ";
+    String TAG = "Mensajes_Firebase: ";
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         // ...
-
         if (remoteMessage.getData().isEmpty())
             showNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
-        else showNotification(remoteMessage.getData());
-
+        else {
+            showNotification(remoteMessage.getData());
+        }
         Log.d(TAG, "From: " + remoteMessage.getFrom());
 
         // Check if message contains a data payload.
@@ -39,14 +39,12 @@ public class MyService extends FirebaseMessagingService {
 
         }
 
-
         if (remoteMessage.getNotification() != null) {
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
-            String titulo = remoteMessage.getNotification().getTitle();
+            /*String titulo = remoteMessage.getNotification().getTitle();
             String texto = remoteMessage.getNotification().getBody();
-            showNotificationNew(titulo, texto);
+            showNotificationNew(titulo, texto);*/
         }
-
 
     }
 
@@ -163,5 +161,29 @@ public class MyService extends FirebaseMessagingService {
     }
 
     private void sendRegistrationToServer(String token) {
+    }
+
+    @Override
+    public void onCreate() {
+        Log.d(TAG, "onCreate");
+        super.onCreate();
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d(TAG, "onDestroy");
+        super.onDestroy();
+    }
+
+    @Override
+    public boolean onUnbind(Intent intent) {
+        Log.d(TAG, "onUnbind");
+        return super.onUnbind(intent);
+    }
+
+    @Override
+    public void onTaskRemoved(Intent rootIntent) {
+        Log.d(TAG, "onTaskRemoved");
+        super.onTaskRemoved(rootIntent);
     }
 }
